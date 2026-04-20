@@ -14,3 +14,8 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+model Image {
+  id        Int      @id @default(autoincrement())
+  url       String
+  createdAt DateTime @default(now())
+}
