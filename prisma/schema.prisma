@@ -16,7 +16,7 @@ datasource db {
 }
 model Image {
   id        Int      @id @default(autoincrement())
-  userId    String
+  userId    Int 
   key       String
   IsProfile Boolean @default(false)
   deleted Boolean @default(false)
