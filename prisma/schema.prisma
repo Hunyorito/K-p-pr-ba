@@ -16,6 +16,10 @@ datasource db {
 }
 model Image {
   id        Int      @id @default(autoincrement())
+  userId    String
+  key       String
+  IsProfile Boolean @default(false)
+  deleted Boolean @default(false)
   url       String
   createdAt DateTime @default(now())
 }

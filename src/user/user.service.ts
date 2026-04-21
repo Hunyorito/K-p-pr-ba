@@ -25,9 +25,10 @@ export class UserService {
   remove(id: number) {
     return `This action removes a #${id} user`;
   }
-  private bucket = "images";
+  private bucket = "test-image";
 
   async upload(file: Express.Multer.File) {
+    console.log("Edg 1")
     const fileName = `${Date.now()}-${file.originalname}`;
 
     await s3.send(
